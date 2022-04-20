@@ -23,6 +23,14 @@ class ExplorerService {
 
     return { user: explorer, msg: "user created" };
   }
+
+  static updateExplorer(payload) {
+    return { msg: "updated", explorer: payload };
+  }
+
+  static deleteExplorer(payload) {
+    return { msg: "deleted", explorer: payload };
+  }
 }
 
 export default ExplorerService;

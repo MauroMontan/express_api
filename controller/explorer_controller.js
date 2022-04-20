@@ -23,4 +23,18 @@ router.post("/register", (req, res) => {
   res.json(user);
 });
 
+router.put("/:id", (req, res) => {
+  const body = req.body;
+  const user = ExplorerService.updateExplorer(body);
+
+  res.json(user);
+});
+
+router.delete("/:id", (req, res) => {
+  const body = req.body;
+  const user = ExplorerService.deleteExplorer(body);
+
+  res.json(user);
+});
+
 export default router;
